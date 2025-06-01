@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlimeDash</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.gif">
+</head>
+<body>
+    <div id="shop">
+        <h1>BOUTIQUE</h1>
+        <div id="close-shop">X</div>
+        <p>Les objets débloqués sont utilisables 1 fois par partie !<br> (Sauf le slime rouge, qui est permanent)</p>
+        <ul>
+            <li>
+                <img class="boutiquePics" src="./assets/sablier.png"> 
+                <div>
+                    <h2>SABLIER</h2>
+                    <p>Ralentis la vitesse de 5% à l'activation.<br><span>15<img src='../assets/coin.svg' alt='coin' width='20px' height='20px'></span></p>
+                    
+                </div>
+                <input type="button" value="Débloquer" class="buttonAcheter" id="sablier">
+            </li>
+            <li>
+                <img class="boutiquePics" src="./assets/heartMieux.png">
+                <div>
+                    <h2>SECONDE CHANCE</h2>
+                    <p>Sauve d'une chute fatale !<br><span>30<img src='../assets/coin.svg' alt='coin' width='20px' height='20px'></span></p>
+                </div>
+                <input type="button" value="Débloquer" class="buttonAcheter" id="vie">
+            </li>
+            <li>
+                <img class="boutiquePics" src="./assets/slime/red/move/1.png">
+                <div>
+                    <h2>SLIME ROUGE</h2>
+                    <p>Il est rouge, et il saute haut.<br><span>50<img src='../assets/coin.svg' alt='coin' width='20px' height='20px'></p>
+                </div>
+                <input type="button" value="Débloquer" class="buttonAcheter" id="redSlime">
+            </li>
+        </ul>
+    </div>
+    <div id="game">
+        <div id="vitesse"></div>
+        <div id="chrono"></div>
+        <div id="piece"></div>
+        <div id="startGame">
+            <h1>S L I M E D A S H</h1>
+            <ul>
+                <li><input id="pseudo" type="text" placeholder="Entrez votre pseudo"></li>
+                <li><input type="button" value="Commencer" id="startButton"></li>
+                <li><input type="button" value="Leaderboard" id="leaderboardButton"></li>
+                <li><input type="button" value="Boutique" id="boutiqueButton"></li>
+            </ul>
+        </div>
+    </div>
+    <div id="leaderboard"></div>
+    
+    <script type="module" src="script.js"></script>
+    <script type="module" src="leaderboard.js"></script>
+    <script type="module" src="boutique.js"></script>
+    
+</body>
+</html>

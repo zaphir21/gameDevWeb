@@ -1,0 +1,246 @@
+
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('./assets/font/Minecraft.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Minecraft', sans-serif;
+}
+#game{
+    background-image: url("./assets/background_01.jpg") ;
+    background-size: cover;
+    background-position-y: center;
+    
+}
+
+#vitesse {
+    position: fixed;
+    font-family: 'Minecraft', sans-serif;
+    top:10px;
+    left:10px;
+    font-size: 27px;
+    padding: 5px;
+}
+#chrono {
+    position: fixed;
+    font-family: 'nn', sans-serif;
+    top:10px;
+    right:10px;
+    font-size: 27px;
+    padding: 5px;
+}
+#piece{
+    position: fixed;
+    font-family: 'Minecraft';
+    top:10px;
+    right:50%;
+    font-size: 27px;
+    padding: 5px;
+}
+
+
+#startGame{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+}
+ul{
+  list-style: none;
+}
+#startGame li input{
+    margin: 5px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    width: 500px;
+    height: 100px;
+    font-size: 32px;
+    font-family: 'Minecraft', sans-serif;
+    border: 8px solid #333;
+    text-transform: uppercase;
+}
+
+#startGame li input[type="text"]{
+    background-color: #ffffff;
+    color: #1f1f1f;
+    border: none;
+    text-align: center;
+}
+#startGame li h1{
+    font-size: 60px;
+
+}
+#startGame li:hover {
+  background: #3a3a3a;
+}
+
+#leaderboard {
+    display: none;
+    top: 70px;
+    left: 25%;
+    position: absolute;
+    width: 50%; /* Largeur ajustable */
+    margin: 20px auto; /* Centrer le tableau */
+    border: 8px solid #333; /* Bordure épaisse pour un style pixel art */
+    border-radius: 8px; /* Coins légèrement arrondis */
+    background-color: #1e1e1e;
+    color: #ffffff; /* Texte blanc pour le contraste */
+    font-family: 'Minecraft', sans-serif; /* Police pixelisée */
+    text-align: center;
+  }
+  #close-leaderboard {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    margin-top: 5px;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    
+  }
+  
+  #leaderboard table {
+    width: 100%;
+    border-collapse: collapse; /* Fusionne les bordures */
+  }
+  
+  #leaderboard th, #leaderboard td {
+    border: 2px solid #555; /* Bordures internes */
+    padding: 10px; /* Espacement interne */
+    font-size: 16px; /* Taille lisible */
+  }
+  
+  #leaderboard th {
+    background-color: #333; /* Fond des en-têtes */
+    color: #f4b41a; /* Texte doré pour les titres */
+    text-transform: uppercase;
+  }
+  #leaderboard tr:nth-child(odd) {
+    background-color: #2a2a2a; /* Couleur alternative pour les rangées impaires */
+  }
+  
+  #leaderboard tr:nth-child(even) {
+    background-color: #1f1f1f; /* Couleur alternative pour les rangées paires */
+  }
+  
+  #leaderboard td:first-child{
+    font-weight: bold; /* Mettez en valeur le premier élément (rang ou noms) */
+    color: #4caf50; /* Couleur verte pour les noms ou rangs */
+  }
+
+  
+  #leaderboard caption {
+    margin: 10px 0 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f4b41a;
+    text-shadow: 2px 2px 0px #000;
+  }
+  
+  #leaderboard #one td:first-child   {
+    color: #f4b41a; 
+  }
+  #leaderboard #two td:first-child   {
+    color: #C0C0C0; 
+  }
+  #leaderboard #three td:first-child   {
+    color: #CD7F32; 
+  }
+  
+  #shop {
+    display: none;
+    top: 70px;
+    left: 22%;
+    position: absolute;
+    width: 56%; /* Largeur ajustable */
+    margin: 20px auto; /* Centrer le tableau */
+    border: 8px solid #333; /* Bordure épaisse pour un style pixel art */
+    border-radius: 8px; /* Coins légèrement arrondis */
+    background-color: #1e1e1e;
+    color: #ffffff; /* Texte blanc pour le contraste */
+    font-family: 'Minecraft', sans-serif; /* Police pixelisée */
+    z-index: 5;
+    text-align: center;
+    
+ 
+  }
+  #close-shop {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    margin-top: 5px;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;   
+  }
+  #shop h1 {
+    font-size: 20px;
+    color: #f4b41a;
+    text-shadow: 2px 2px 0px #000;
+  }
+  #shop p {
+    font-size: 20px;
+    color: #bbb;
+    margin-bottom: 15px;
+  }
+
+
+  #shop ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  #shop li {
+    background: #292929;
+    border: 3px solid #444;
+    padding: 15px;
+    margin: 10px;
+    width: 240px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 3px 3px 0px #000;
+  }
+  
+  .boutiquePics {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 10px;
+  }
+  .buttonAcheter {
+    background: #4caf50;
+    color: white;
+    border: 2px solid #2e7d32;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-family: 'Minecraft', sans-serif;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #000;
+  }
+  .buttonAcheter:hover {
+    background: #388e3c;
+  }
